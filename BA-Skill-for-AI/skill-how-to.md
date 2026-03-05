@@ -1,187 +1,187 @@
 ---
 name: BA How-To Writing Style Guide
-description: Viết tài liệu hướng dẫn kỹ thuật cho BA non-tech theo chuẩn Hana BA — cấu trúc từng bước, văn phong thân thiện tiếng Việt, có emoji, code block, bảng so sánh, case study thực tế và checklist.
+description: Write technical how-to guides for non-tech BAs following the VNG Hana BA standard — step-by-step structure, friendly tone, emoji, code blocks, comparison tables, real-world case studies, and checklists.
 ---
 
-# Mục đích của Skill này
+# Purpose of This Skill
 
-Skill này giúp AI tạo ra các tài liệu hướng dẫn **kỹ thuật dành cho BA non-tech** theo đúng phong cách đang được áp dụng trong series "Bướ![1772678383454](image/skill-how-to/1772678383454.png)c đầu trở thành BA AI thực thụ" của team VNG Hana.
+This skill helps AI produce **technical how-to guides for non-tech BAs** in the exact style used by the VNG Hana "Becoming an AI-Augmented BA" series.
 
-Khi được yêu cầu viết hướng dẫn (how-to, tutorial, setup guide, onboarding doc...), AI phải tuân thủ cấu trúc, văn phong và các quy tắc dưới đây.
-
----
-
-# PHẦN 1 — Cấu trúc bắt buộc của một bài hướng dẫn
-
-Mỗi bài hướng dẫn **phải có đủ** các thành phần sau, theo đúng thứ tự:
-
-## 1.1 — Tiêu đề H1
-
-```
-# [emoji phù hợp] [Tên chủ đề ngắn gọn] — [Tagline hấp dẫn giải thích bài dùng để làm gì]
-```
-
-**Ví dụ:**
-```
-# 🐙 Bước đầu trở thành BA AI thực thụ — Làm quen với GitHub
-# 🎨 BA x AI x Figma — Cẩm nang "đu trend" MCP Figma với Cursor
-```
-
-Tiêu đề phải: ngắn, có emoji liên quan, phần sau `—` giải thích bài dùng làm gì.
+When asked to write a guide (how-to, tutorial, setup guide, onboarding doc, etc.), AI must follow the structure, tone, and rules defined below.
 
 ---
 
-## 1.2 — Block metadata (header)
+# SECTION 1 — Required Structure of a How-To Guide
+
+Every guide **must include** all of the following components, in order:
+
+## 1.1 — H1 Title
+
+```
+# [relevant emoji] [Short topic name] — [Tagline explaining what the guide is for]
+```
+
+**Examples:**
+```
+# 🐙 Your First Step as an AI-Augmented BA — Getting Started with GitHub
+# 🎨 BA x AI x Figma — The Ultimate Guide to MCP Figma with Cursor
+```
+
+The title must be: short, have a relevant emoji, and the part after `—` must explain what the guide is for.
+
+---
+
+## 1.2 — Metadata Block (Header)
 
 ```markdown
-> ✍️ **Tác giả:** [tên tác giả hoặc team]
-> 🗓️ **Ngày viết:** [Tháng M/YYYY]
-> 🎯 **Dành cho:** [mô tả đối tượng cụ thể]
-> 📚 **Series:** [tên series — Bài N/N] ← chỉ thêm nếu là bài trong series
+> ✍️ **Author:** [author name or team]
+> 🗓️ **Date:** [Month YYYY]
+> 🎯 **Audience:** [specific audience description]
+> 📚 **Series:** [series name — Article N/N] ← only include if part of a series
 ```
 
 ---
 
-## 1.3 — Section "Why should you care?" (Lời mở đầu)
+## 1.3 — "Why Should You Care?" Section (Opening)
 
-- Bắt đầu bằng **pain point thực tế** của người đọc — không bắt đầu bằng định nghĩa kỹ thuật
-- Mô tả "trước đây làm thế nào" vs "bây giờ làm được gì"
-- Kết bằng 1 câu kêu gọi đọc tiếp
-- Tone: nhẹ nhàng, đồng cảm, có thể dùng emoji cảm xúc
+- Start with a **real pain point** the reader faces — never start with a technical definition
+- Describe "how it used to be done" vs "what you can do now"
+- End with one hook sentence to encourage reading on
+- Tone: empathetic, warm, can use emotional emojis
 
-**Ví dụ cấu trúc:**
+**Template structure:**
 ```
-[Mô tả cách làm cũ mệt mỏi như thế nào]
+[Describe how the old way was exhausting]
 
-Nhưng giờ khác rồi! Với [công cụ/phương pháp], bạn có thể:
+But now things are different! With [tool/method], you can:
 - [benefit 1]
 - [benefit 2]
 - [benefit 3]
 
-[Câu hook → đọc tiếp]
+[Hook sentence → keep reading]
 ```
 
 ---
 
-## 1.4 — Roadmap tổng quan
+## 1.4 — Overview Roadmap
 
-Dùng code block để tóm tắt cấu trúc bài hoặc các hành trình:
+Use a code block to summarize the article structure or journeys:
 
 ```
-1. [Tên phần 1]
-2. [Tên phần 2]
-3. [Tên phần 3]
+1. [Section name 1]
+2. [Section name 2]
+3. [Section name 3]
 ...
 ```
 
-Hoặc dạng so sánh 2 hành trình:
+Or a two-journey comparison format:
 
 ```
-Hành trình 1: [Tên]  →  [Công cụ]  (mục đích ngắn)
-Hành trình 2: [Tên]  →  [Công cụ]  (mục đích ngắn)
-```
-
----
-
-## 1.5 — Các PHẦN / HÀNH TRÌNH chính
-
-Mỗi phần lớn dùng `# H1 IN HOA` với emoji và tên rõ ràng:
-
-```markdown
-# 🛤️ HÀNH TRÌNH 1 — [Tên hành trình]
-# 🧠 PHẦN 1 — [Tên phần]
-```
-
-Bên trong mỗi phần: chia thành các **Step** đánh số từ 1.
-
----
-
-## 1.6 — Các Step (bước thực hành)
-
-```markdown
-## Step N — [Tên bước ngắn gọn, bắt đầu bằng động từ]
-```
-
-Mỗi step bao gồm:
-1. **Mô tả ngắn** (1-2 câu) tại sao làm bước này
-2. **Danh sách hành động** đánh số hoặc bullet
-3. **Code block** nếu có lệnh/config cần copy
-4. **Kết quả mong đợi** — chỉ rõ ✅ thành công trông như thế nào
-5. **Placeholder ảnh** (nếu cần visual)
-
-**Mẫu code block kết quả:**
-```
-✅ Thành công: [mô tả trạng thái thành công]
-❌ Lỗi: [mô tả lỗi thường gặp và cách fix]
+Journey 1: [Name]  →  [Tool]  (short purpose)
+Journey 2: [Name]  →  [Tool]  (short purpose)
 ```
 
 ---
 
-## 1.7 — Bảng tóm tắt cuối mỗi hành trình
+## 1.5 — Main SECTIONS / JOURNEYS
+
+Each major section uses `# H1 ALL CAPS` with an emoji and a clear name:
 
 ```markdown
-## ✅ [Tên hành trình] — Tóm tắt
-
-| Bước | Việc cần làm |
-|------|-------------|
-| 1    | [action]    |
-| 2    | [action]    |
+# 🛤️ JOURNEY 1 — [Journey name]
+# 🧠 SECTION 1 — [Section name]
 ```
 
-Kèm danh sách **"Dùng được để làm gì"** và **"Không làm được gì"** bằng ✅/❌.
+Inside each section: break down into numbered **Steps** starting from 1.
 
 ---
 
-## 1.8 — Section Tips & Tricks
+## 1.6 — Steps (Hands-On Actions)
 
 ```markdown
-# 💡 Tips & Tricks cho BA
+## Step N — [Short step name, starting with a verb]
+```
 
-### [Số]. [Tên tip ngắn gọn]
-[Nội dung]
+Each step includes:
+1. **Short description** (1-2 sentences) of why this step is needed
+2. **Numbered or bulleted action list**
+3. **Code block** if there are commands/configs to copy
+4. **Expected result** — clearly show what ✅ success looks like
+5. **Image placeholder** (if a visual is needed)
+
+**Expected result code block template:**
+```
+✅ Success: [description of the successful state]
+❌ Error: [description of a common error and how to fix it]
 ```
 
 ---
 
-## 1.9 — Section Thực chiến (Case Study)
+## 1.7 — Summary Table at the End of Each Journey
 
 ```markdown
-# 🚀 Thực chiến — Case study thực tế
+## ✅ [Journey name] — Summary
 
-## Case [N]: [Tên tình huống]
+| Step | Action |
+|------|--------|
+| 1    | [action] |
+| 2    | [action] |
+```
 
-> "[Câu prompt/yêu cầu thực tế người dùng đã gõ]"
+Follow with a **"What you can do"** and **"What you cannot do"** list using ✅/❌.
 
-**AI đã làm:**
+---
+
+## 1.8 — Tips & Tricks Section
+
+```markdown
+# 💡 Tips & Tricks for BAs
+
+### [Number]. [Short tip name]
+[Content]
+```
+
+---
+
+## 1.9 — Real-World Practice (Case Study) Section
+
+```markdown
+# 🚀 Real-World Practice — Case Studies
+
+## Case [N]: [Situation name]
+
+> "[Actual prompt/request the user typed]"
+
+**What AI did:**
 - [action 1]
 - [action 2]
 
-⏱️ **Tiết kiệm:** [mô tả thời gian/công sức tiết kiệm được]
+⏱️ **Time saved:** [description of time/effort saved]
 ```
 
 ---
 
-## 1.10 — Bảng Tài nguyên
+## 1.10 — Resources Table
 
 ```markdown
-# 📚 Tài nguyên thêm
+# 📚 Additional Resources
 
-| Link | Mô tả |
-|------|-------|
-| [tên](url) | [mô tả ngắn] |
+| Link | Description |
+|------|-------------|
+| [name](url) | [short description] |
 ```
 
 ---
 
-## 1.11 — Checklist tổng (bookmark-able)
+## 1.11 — Master Checklist (Bookmark-able)
 
-Luôn kết thúc bằng checklist trong code block — người đọc có thể bookmark lại:
+Always end with a checklist inside a code block — readers can bookmark it:
 
 ```
-TÊN HÀNH TRÌNH
-□ [bước 1]
-□ [bước 2]
-□ [bước 3]
+JOURNEY NAME
+□ [step 1]
+□ [step 2]
+□ [step 3]
 ```
 
 ---
@@ -189,214 +189,214 @@ TÊN HÀNH TRÌNH
 ## 1.12 — Footer
 
 ```markdown
-> 💬 **Feedback / câu hỏi?**
-> Thả vào Slack `#[tên channel]` hoặc tạo Issue ngay trong repo này nhé!
-> [Câu kết vui vẻ phù hợp chủ đề] ✌️
+> 💬 **Feedback / questions?**
+> Drop a message in Slack `#[channel name]` or open an Issue in this repo!
+> [Fun closing line relevant to the topic] ✌️
 ```
 
 ---
 
 ---
 
-# PHẦN 2 — Quy tắc văn phong
+# SECTION 2 — Writing Style Rules
 
-## 2.1 — Giọng điệu (Tone of Voice)
+## 2.1 — Tone of Voice
 
-| Nên | Không nên |
-|-----|-----------|
-| Thân thiện như đồng nghiệp nói chuyện | Formal như văn bản hành chính |
-| "bạn", "mình", "team mình" | "quý vị", "người dùng", "độc giả" |
-| "Mệt lắm bạn ơi 😮‍💨" | "Đây là một thách thức không nhỏ" |
-| Nhẹ nhàng thừa nhận khó khăn | Pretend mọi thứ đơn giản |
-| Hỏi ngược lại ("Nghe bá đạo không?") | Độc thoại một chiều |
+| Do | Don't |
+|----|-------|
+| Friendly like a colleague chatting | Formal like a corporate document |
+| "you", "we", "our team" | "users", "readers", "one should" |
+| "That used to be such a pain 😮‍💨" | "This presents a considerable challenge" |
+| Gently acknowledge difficulties | Pretend everything is simple |
+| Ask rhetorical questions ("Sounds powerful, right?") | One-way monologue |
 
 ---
 
-## 2.2 — Cách giải thích khái niệm kỹ thuật
+## 2.2 — Explaining Technical Concepts
 
-**Luôn dùng analogy quen thuộc trước khi giải thích kỹ thuật:**
-
-```
-❌ "Git là distributed version control system"
-
-✅ "Git như Google Docs có track changes — nhưng mạnh hơn nhiều,
-   và chạy ngay trên máy bạn"
-```
-
-**Luôn trả lời "Tại sao?" trước "Làm thế nào?":**
+**Always use a familiar analogy before the technical explanation:**
 
 ```
-❌ [Step 1 ngay lập tức]
+❌ "Git is a distributed version control system"
 
-✅ [1-2 câu giải thích tại sao bước này cần thiết]
-   → [rồi mới đến các action cụ thể]
+✅ "Git is like Google Docs with Track Changes — but far more powerful,
+   and it runs directly on your machine"
+```
+
+**Always answer "Why?" before "How?":**
+
+```
+❌ [Jump straight to Step 1]
+
+✅ [1-2 sentences explaining why this step is necessary]
+   → [then the specific actions]
 ```
 
 ---
 
 ## 2.3 — Emoji
 
-- Dùng emoji **có chủ đích**, không spam
-- Mỗi section/phần lớn: 1 emoji đặc trưng ở đầu heading
-- Trong nội dung: dùng để nhấn mạnh hoặc tạo nhịp điệu
-- Checklist: dùng ✅ ❌ □ nhất quán
-- Cảm xúc: 😅 😮‍💨 🎉 ✌️ dùng tự nhiên, không gượng
+- Use emoji **intentionally**, not as decoration spam
+- Each major section/part: 1 characteristic emoji at the start of the heading
+- In body text: use to emphasize or create rhythm
+- Checklists: use ✅ ❌ □ consistently
+- Emotions: 😅 😮‍💨 🎉 ✌️ used naturally, not forced
 
-**Bộ emoji chuẩn theo loại nội dung:**
+**Standard emoji set by content type:**
 
-| Loại | Emoji |
-|------|-------|
-| Hành trình / con đường | 🛤️ 🚀 |
-| Lý thuyết / khái niệm | 🧠 📚 |
-| Thực hành / setup | 🛠️ ⚙️ |
-| Mẹo / tricks | 💡 |
-| Cảnh báo | ⚠️ |
-| So sánh / tổng kết | 🎯 📊 |
-| Tài nguyên | 📚 🔗 |
+| Content Type | Emoji |
+|---|---|
+| Journey / path | 🛤️ 🚀 |
+| Theory / concepts | 🧠 📚 |
+| Hands-on / setup | 🛠️ ⚙️ |
+| Tips / tricks | 💡 |
+| Warnings | ⚠️ |
+| Comparison / summary | 🎯 📊 |
+| Resources | 📚 🔗 |
 | Checklist | 🎁 ✅ |
 | Case study | 🚀 ⏱️ |
-| Placeholder ảnh | 🖼️ |
+| Image placeholder | 🖼️ |
 
 ---
 
-## 2.4 — Code blocks
+## 2.4 — Code Blocks
 
-Dùng code block cho:
-- Lệnh terminal/shell
-- File config (JSON, YAML...)
-- ASCII flow diagram
-- Ví dụ trước/sau (❌ tệ vs ✅ tốt)
-- Checklist bookmark
-- Kết quả mong đợi (✅/❌)
+Use code blocks for:
+- Terminal/shell commands
+- Config files (JSON, YAML, etc.)
+- ASCII flow diagrams
+- Before/after examples (❌ bad vs ✅ good)
+- Bookmark checklists
+- Expected results (✅/❌)
 
-**Luôn ghi ngôn ngữ** khi có syntax highlighting: ` ```json `, ` ```bash `, ` ```powershell `
+**Always specify the language** when syntax highlighting applies: ` ```json `, ` ```bash `, ` ```powershell `
 
-**Dùng code block không có ngôn ngữ** cho flow diagram, checklist, kết quả text thuần.
+**Use plain code blocks** (no language tag) for flow diagrams, checklists, and plain text results.
 
 ---
 
 ## 2.5 — Blockquotes
 
-| Ký hiệu | Dùng khi |
-|---------|----------|
-| `> 💡` | Tip bổ sung, thông tin hay biết |
-| `> ⚠️` | Cảnh báo, điều kiện bắt buộc, gotcha |
-| `> 🖼️` | Placeholder cho ảnh cần chụp/cung cấp sau |
-| `> 💬` | Câu hỏi thường gặp (FAQ inline) |
-| `> 🎯` | Rule of thumb, nguyên tắc chọn lựa |
+| Symbol | When to use |
+|--------|-------------|
+| `> 💡` | Bonus tips, nice-to-know information |
+| `> ⚠️` | Warnings, prerequisites, gotchas |
+| `> 🖼️` | Placeholder for screenshots to be added later |
+| `> 💬` | Inline FAQ, common questions |
+| `> 🎯` | Rule of thumb, decision-making principle |
 
 ---
 
-## 2.6 — Bảng (Tables)
+## 2.6 — Tables
 
-Dùng table khi so sánh 2+ thứ. Luôn có cột tiêu đề rõ ràng.
+Use tables when comparing 2+ things. Always include clear column headers.
 
-Cột so sánh dùng: ✅ (có/tốt), ❌ (không/xấu), ⚠️ (có nhưng hạn chế).
+Comparison columns use: ✅ (yes/good), ❌ (no/bad), ⚠️ (partial/limited).
 
-**Mẫu bảng so sánh 2 options:**
+**Two-option comparison table template:**
 
 ```markdown
 | | **Option A** | **Option B** |
 |---|---|---|
-| **Điểm X** | ✅ Tốt | ❌ Không có |
-| **Điểm Y** | ⚠️ Hạn chế | ✅ Đầy đủ |
+| **Feature X** | ✅ Supported | ❌ Not available |
+| **Feature Y** | ⚠️ Limited | ✅ Full support |
 ```
 
 ---
 
 ---
 
-# PHẦN 3 — Quy tắc đặc biệt cho BA non-tech
+# SECTION 3 — Special Rules for Non-Tech BA Audience
 
-## 3.1 — Giả định về người đọc
+## 3.1 — Assumed Reader Profile
 
-Luôn viết cho người:
-- **Không biết code**, không quen dòng lệnh
-- **Biết công việc BA**: PRD, user story, wireframe, meeting notes, Jira
-- **Đang dùng**: Windows (chủ yếu), Mac (một số)
-- **Mục tiêu**: Dùng AI để làm việc nhanh hơn, không phải học lập trình
+Always write for someone who:
+- **Does not know how to code**, is not familiar with the command line
+- **Knows BA work**: PRDs, user stories, wireframes, meeting notes, Jira
+- **Uses**: Windows (primarily), Mac (some)
+- **Goal**: Use AI to work faster — not to learn programming
 
 ---
 
-## 3.2 — Khi đề cập lệnh terminal
+## 3.2 — When Mentioning Terminal Commands
 
-- Luôn cung cấp **cả Windows và Mac** nếu khác nhau
-- Giải thích **tác dụng của lệnh** trước khi đưa lệnh
-- Sau lệnh, luôn có **cách kiểm tra thành công**
+- Always provide **both Windows and Mac** versions when they differ
+- Explain **what the command does** before showing it
+- After the command, always include **how to verify success**
 
-**Mẫu:**
+**Template:**
 ```markdown
-Kiểm tra cài thành công:
+Verify successful installation:
 ```bash
 bun --version
-# Kết quả: 1.x.x là thành công ✅
+# Expected output: 1.x.x → ✅ Success
 ```
 ```
 
 ---
 
-## 3.3 — Luôn nói rõ giới hạn
+## 3.3 — Always State Limitations Clearly
 
-Sau mỗi hành trình/tool, phải có section **"Giới hạn cần biết"** hoặc block ⚠️ liệt kê rõ:
-- Điều công cụ **không làm được**
-- Lý do tại sao (để người đọc không nghĩ mình làm sai)
-- Cách workaround (nếu có)
+After each journey/tool section, include a **"Known Limitations"** section or ⚠️ block listing:
+- What the tool **cannot do**
+- Why (so the reader doesn't think they did something wrong)
+- Workaround (if available)
 
 ---
 
-## 3.4 — Placeholder ảnh
+## 3.4 — Image Placeholders
 
-Khi biết cần ảnh minh họa mà chưa có, thêm placeholder:
+When a screenshot is needed but not yet available, add a placeholder:
 
 ```markdown
-> 🖼️ *[Ảnh: mô tả cụ thể cần chụp/vẽ gì, ở đâu, highlight element nào]*
+> 🖼️ *[Screenshot: describe exactly what needs to be captured, where, and which element to highlight]*
 ```
 
-Ví dụ:
+Example:
 ```markdown
-> 🖼️ *[Ảnh: Figma Preferences → Enable local MCP server được toggle ON]*
+> 🖼️ *[Screenshot: Figma Preferences → Enable local MCP server toggle set to ON]*
 ```
 
 ---
 
 ---
 
-# PHẦN 4 — Ví dụ đầu ra mong đợi
+# SECTION 4 — Expected Output Example
 
-Khi nhận yêu cầu: *"Viết hướng dẫn setup Notion cho BA"*
+Given the request: *"Write a setup guide for Notion for BAs"*
 
-AI phải tạo ra file `.md` có đủ:
+AI must produce a `.md` file containing:
 
 ```
-✅ H1 tiêu đề + emoji
-✅ Block metadata (tác giả, ngày, đối tượng)
-✅ Section "Tại sao BA cần Notion?" — bắt đầu bằng pain point
+✅ H1 title with emoji
+✅ Metadata block (author, date, audience)
+✅ "Why do BAs need Notion?" section — starting with a pain point
 ✅ Roadmap code block
-✅ Các PHẦN chia rõ ràng
-✅ Step 1..N với action + kết quả mong đợi + placeholder ảnh
-✅ Bảng tóm tắt cuối mỗi phần
+✅ Clearly divided SECTIONS
+✅ Steps 1..N with actions + expected results + image placeholders
+✅ Summary table at the end of each section
 ✅ Tips & Tricks
-✅ Ít nhất 1 Case Study thực tế với ⏱️ tiết kiệm
-✅ Bảng tài nguyên
-✅ Checklist bookmark trong code block
-✅ Footer với kênh feedback
+✅ At least 1 real-world case study with ⏱️ time saved
+✅ Resources table
+✅ Bookmark checklist in a code block
+✅ Footer with feedback channel
 ```
 
 ---
 
-# PHẦN 5 — Checklist trước khi publish
+# SECTION 5 — Pre-Publish Checklist
 
 ```
-KIỂM TRA TRƯỚC KHI PUBLISH
-□ Tiêu đề H1 có emoji và tagline rõ ràng
-□ Đã có block metadata (tác giả, ngày, đối tượng)
-□ Bài mở đầu bằng pain point, không bằng định nghĩa
-□ Mỗi bước đều có kết quả mong đợi (✅/❌)
-□ Lệnh terminal đều có cả Windows + Mac
-□ Đã thêm placeholder ảnh cho những điểm cần visual
-□ Đã nêu giới hạn/gotcha của công cụ
-□ Có ít nhất 1 case study thực tế
-□ Có checklist bookmark ở cuối
-□ Footer có kênh feedback
-□ File đặt tên dạng kebab-case tiếng Việt không dấu hoặc có dấu (nhất quán với repo)
+PRE-PUBLISH CHECK
+□ H1 title has emoji and a clear tagline
+□ Metadata block present (author, date, audience)
+□ Article opens with a pain point, not a definition
+□ Every step has an expected result (✅/❌)
+□ Terminal commands include both Windows + Mac versions
+□ Image placeholders added for all points that need visuals
+□ Tool limitations and gotchas are explicitly stated
+□ At least one real-world case study included
+□ Bookmark checklist at the end
+□ Footer with feedback channel
+□ Filename uses kebab-case consistent with the repo naming convention
 ```
