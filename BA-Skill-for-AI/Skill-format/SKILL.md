@@ -17,10 +17,11 @@ When triggered, your job is to interview the user, draft a well-structured skill
 skill-name/
 ├── SKILL.md              ← required: YAML frontmatter + instructions
 ├── references/           ← optional: docs loaded into context as needed
-│   ├── writing-style.md  ← link to BA writing style rules if relevant
+│   ├── writing-style.md  ← BA writing style rules (guidance for AI)
 │   └── [domain].md       ← domain-specific reference (add as needed)
 ├── scripts/              ← optional: reusable Python/JS helpers
-└── assets/               ← optional: templates, icons, sample files
+└── assets/               ← optional: templates, icons, fonts used in output
+    └── ba-skill-template.md  ← blank template to clone for new skills
 ```
 
 Keep `SKILL.md` under 500 lines. If you need more, split content into `references/` files and point to them clearly from `SKILL.md`.
@@ -192,8 +193,9 @@ After drafting:
 
 1. Create the folder structure: `skill-name/` with `SKILL.md` + subdirs as needed
 2. If a reusable reference doc is needed (e.g., writing style, domain glossary), write it to `references/`
-3. If a reusable script is needed (e.g., a formatter, a template filler), write it to `scripts/`
-4. Show the user the final tree:
+3. If a template is needed (e.g., blank SKILL structure to clone), write it to `assets/`
+4. If a reusable script is needed (e.g., a formatter, a template filler), write it to `scripts/`
+5. Show the user the final tree:
 
 ```
 skill-name/
@@ -202,9 +204,10 @@ skill-name/
 │   └── [any-reference].md
 ├── scripts/
 └── assets/
+    └── [any-template].md
 ```
 
-5. Ask: "Does this look right? Anything to add or adjust before we zip it up?"
+6. Ask: "Does this look right? Anything to add or adjust before we zip it up?"
 
 ---
 
@@ -231,4 +234,4 @@ SKILL QUALITY CHECK
 ## Reference Files in This Skill
 
 - `references/writing-style.md` — Full BA writing style rules (tone, emoji, tables, code blocks)
-- `references/ba-skill-template.md` — Blank SKILL.md template to clone for new skills
+- `assets/ba-skill-template.md` — Blank SKILL.md template to clone for new skills
