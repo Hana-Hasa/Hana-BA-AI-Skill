@@ -2,12 +2,11 @@
 name: BA How-To Writing Style Guide
 description: Write technical how-to guides for non-tech BAs following the VNG Hana BA standard — step-by-step structure, friendly tone, emoji, code blocks, comparison tables, real-world case studies, and checklists.
 ---
-
 # Purpose of This Skill
 
 This skill helps AI produce **technical how-to guides for non-tech BAs** in the exact style used by the VNG Hana "Becoming an AI-Augmented BA" series.
 
-When asked to write a guide (how-to, tutorial, setup guide, onboarding doc, etc.), AI must follow the structure, tone, and rules defined below.
+When asked to write a guide (how-to, tutorial, setup guide, onboarding doc, introduction, etc.), AI must follow the structure, tone, and rules defined below.
 
 ---
 
@@ -22,6 +21,7 @@ Every guide **must include** all of the following components, in order:
 ```
 
 **Examples:**
+
 ```
 # 🐙 Your First Step as an AI-Augmented BA — Getting Started with GitHub
 # 🎨 BA x AI x Figma — The Ultimate Guide to MCP Figma with Cursor
@@ -50,6 +50,7 @@ The title must be: short, have a relevant emoji, and the part after `—` must e
 - Tone: empathetic, warm, can use emotional emojis
 
 **Template structure:**
+
 ```
 [Describe how the old way was exhausting]
 
@@ -103,6 +104,7 @@ Inside each section: break down into numbered **Steps** starting from 1.
 ```
 
 Each step includes:
+
 1. **Short description** (1-2 sentences) of why this step is needed
 2. **Numbered or bulleted action list**
 3. **Code block** if there are commands/configs to copy
@@ -110,6 +112,7 @@ Each step includes:
 5. **Image placeholder** (if a visual is needed)
 
 **Expected result code block template:**
+
 ```
 ✅ Success: [description of the successful state]
 ❌ Error: [description of a common error and how to fix it]
@@ -202,13 +205,13 @@ JOURNEY NAME
 
 ## 2.1 — Tone of Voice
 
-| Do | Don't |
-|----|-------|
-| Friendly like a colleague chatting | Formal like a corporate document |
-| "you", "we", "our team" | "users", "readers", "one should" |
-| "That used to be such a pain 😮‍💨" | "This presents a considerable challenge" |
-| Gently acknowledge difficulties | Pretend everything is simple |
-| Ask rhetorical questions ("Sounds powerful, right?") | One-way monologue |
+| Do                                                   | Don't                                    |
+| ---------------------------------------------------- | ---------------------------------------- |
+| Friendly like a colleague chatting                   | Formal like a corporate document         |
+| "you", "we", "our team"                              | "users", "readers", "one should"         |
+| "That used to be such a pain 😮‍💨"                 | "This presents a considerable challenge" |
+| Gently acknowledge difficulties                      | Pretend everything is simple             |
+| Ask rhetorical questions ("Sounds powerful, right?") | One-way monologue                        |
 
 ---
 
@@ -244,24 +247,25 @@ JOURNEY NAME
 
 **Standard emoji set by content type:**
 
-| Content Type | Emoji |
-|---|---|
-| Journey / path | 🛤️ 🚀 |
-| Theory / concepts | 🧠 📚 |
-| Hands-on / setup | 🛠️ ⚙️ |
-| Tips / tricks | 💡 |
-| Warnings | ⚠️ |
-| Comparison / summary | 🎯 📊 |
-| Resources | 📚 🔗 |
-| Checklist | 🎁 ✅ |
-| Case study | 🚀 ⏱️ |
-| Image placeholder | 🖼️ |
+| Content Type         | Emoji     |
+| -------------------- | --------- |
+| Journey / path       | 🛤️ 🚀   |
+| Theory / concepts    | 🧠 📚     |
+| Hands-on / setup     | 🛠️ ⚙️ |
+| Tips / tricks        | 💡        |
+| Warnings             | ⚠️      |
+| Comparison / summary | 🎯 📊     |
+| Resources            | 📚 🔗     |
+| Checklist            | 🎁 ✅     |
+| Case study           | 🚀 ⏱️   |
+| Image placeholder    | 🖼️      |
 
 ---
 
 ## 2.4 — Code Blocks
 
 Use code blocks for:
+
 - Terminal/shell commands
 - Config files (JSON, YAML, etc.)
 - ASCII flow diagrams
@@ -277,13 +281,13 @@ Use code blocks for:
 
 ## 2.5 — Blockquotes
 
-| Symbol | When to use |
-|--------|-------------|
-| `> 💡` | Bonus tips, nice-to-know information |
-| `> ⚠️` | Warnings, prerequisites, gotchas |
+| Symbol     | When to use                                   |
+| ---------- | --------------------------------------------- |
+| `> 💡`   | Bonus tips, nice-to-know information          |
+| `> ⚠️` | Warnings, prerequisites, gotchas              |
 | `> 🖼️` | Placeholder for screenshots to be added later |
-| `> 💬` | Inline FAQ, common questions |
-| `> 🎯` | Rule of thumb, decision-making principle |
+| `> 💬`   | Inline FAQ, common questions                  |
+| `> 🎯`   | Rule of thumb, decision-making principle      |
 
 ---
 
@@ -311,6 +315,7 @@ Comparison columns use: ✅ (yes/good), ❌ (no/bad), ⚠️ (partial/limited).
 ## 3.1 — Assumed Reader Profile
 
 Always write for someone who:
+
 - **Does not know how to code**, is not familiar with the command line
 - **Knows BA work**: PRDs, user stories, wireframes, meeting notes, Jira
 - **Uses**: Windows (primarily), Mac (some)
@@ -325,12 +330,14 @@ Always write for someone who:
 - After the command, always include **how to verify success**
 
 **Template:**
+
 ```markdown
 Verify successful installation:
 ```bash
 bun --version
 # Expected output: 1.x.x → ✅ Success
 ```
+
 ```
 
 ---
@@ -353,6 +360,7 @@ When a screenshot is needed but not yet available, add a placeholder:
 ```
 
 Example:
+
 ```markdown
 > 🖼️ *[Screenshot: Figma Preferences → Enable local MCP server toggle set to ON]*
 ```
