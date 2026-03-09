@@ -1,8 +1,8 @@
 # 🤖 Claude Code — Hướng dẫn cài đặt cho VS Code, Cursor & Antigravity
 
-> ✍️ **Tác giả:** Senior BA team VNG
+> ✍️ **Tác giả:** Hana Ngọc Huyền
 > 🗓️ **Ngày viết:** Tháng 3/2026
-> 🎯 **Dành cho:** BA non-tech muốn dùng Claude Code trực tiếp trong editor để tăng tốc công việc
+> 🎯 **Dành cho:** BA muốn dùng Claude Code trực tiếp trong editor để tăng tốc công việc
 > 📚 **Series:** Becoming an AI-Augmented BA — Article 3
 
 ---
@@ -58,11 +58,13 @@ Node.js giống như "pin" để Claude Code chạy được. Không có Node.js
 Kiểm tra cài thành công:
 
 **Windows (PowerShell):**
+
 ```powershell
 node --version
 ```
 
 **Mac/Linux (Terminal):**
+
 ```bash
 node --version
 ```
@@ -122,11 +124,11 @@ Terminal sẽ mở browser để bạn đăng nhập. Sau khi đăng nhập xong
 
 ## ✅ Chuẩn bị — Tóm tắt
 
-| Bước | Việc cần làm |
-|------|-------------|
-| 1 | Cài Node.js v18+ từ nodejs.org |
-| 2 | `npm install -g @anthropic-ai/claude-code` |
-| 3 | `claude auth login` → đăng nhập qua browser |
+| Bước | Việc cần làm                                   |
+| ------ | ------------------------------------------------- |
+| 1      | Cài Node.js v18+ từ nodejs.org                  |
+| 2      | `npm install -g @anthropic-ai/claude-code`      |
+| 3      | `claude auth login` → đăng nhập qua browser |
 
 ---
 
@@ -193,11 +195,11 @@ AI sẽ đọc project của bạn và trả lời ngay 🎉
 
 ## ✅ Cách 1 — Tóm tắt
 
-| Bước | Việc cần làm |
-|------|-------------|
-| 1 | Extensions → tìm "Claude Code" → Install |
-| 2 | Click icon Claude ở sidebar hoặc `Ctrl+Shift+P` → "Claude Code: Open" |
-| 3 | Gõ câu hỏi → AI trả lời ngay trong editor |
+| Bước | Việc cần làm                                                            |
+| ------ | -------------------------------------------------------------------------- |
+| 1      | Extensions → tìm "Claude Code" → Install                                |
+| 2      | Click icon Claude ở sidebar hoặc `Ctrl+Shift+P` → "Claude Code: Open" |
+| 3      | Gõ câu hỏi → AI trả lời ngay trong editor                            |
 
 ---
 
@@ -227,7 +229,7 @@ Cursor tương thích với VS Code extensions, nên bạn cài y hệt:
 Nếu extension không hoạt động, bạn chạy Claude Code trực tiếp trong terminal của Cursor:
 
 1. Mở **Cursor**
-2. Mở Terminal: `` Ctrl+` `` (backtick) hoặc menu **Terminal → New Terminal**
+2. Mở Terminal: ``Ctrl+` `` (backtick) hoặc menu **Terminal → New Terminal**
 3. Gõ:
 
 ```bash
@@ -247,10 +249,10 @@ claude
 
 ## ✅ Cách 2 — Tóm tắt
 
-| Cách | Việc cần làm |
-|------|-------------|
+| Cách           | Việc cần làm                                                    |
+| --------------- | ------------------------------------------------------------------ |
 | 2A — Extension | `Ctrl+Shift+X` → "Claude Code" → Install → Click icon sidebar |
-| 2B — Terminal | `` Ctrl+` `` → gõ `claude` → chat trực tiếp |
+| 2B — Terminal  | ``Ctrl+` `` → gõ `claude` → chat trực tiếp                   |
 
 ---
 
@@ -299,11 +301,11 @@ Claude Code sẽ khởi động và nhận diện project hiện tại.
 
 ## ✅ Cách 3 — Tóm tắt
 
-| Bước | Việc cần làm |
-|------|-------------|
-| 1 | Mở Antigravity → mở project |
-| 2 | Terminal → gõ `claude` |
-| 3 | Chat với AI ngay trong terminal |
+| Bước | Việc cần làm                  |
+| ------ | -------------------------------- |
+| 1      | Mở Antigravity → mở project   |
+| 2      | Terminal → gõ `claude`       |
+| 3      | Chat với AI ngay trong terminal |
 
 ---
 
@@ -311,15 +313,16 @@ Claude Code sẽ khởi động và nhận diện project hiện tại.
 
 # 🎯 So sánh nhanh 3 cách
 
-| | **VS Code** | **Cursor** | **Antigravity** |
-|---|---|---|---|
-| **Cách cài** | Extension chính chủ | Extension hoặc Terminal | Terminal |
-| **Giao diện** | Panel chat riêng | Panel chat hoặc Terminal | Terminal |
-| **Tương thích** | ✅ Tốt nhất | ✅ Tốt (Extension có thể lỗi nhẹ) | ✅ Tốt |
-| **AI khác sẵn có** | GitHub Copilot | Cursor AI built-in | Antigravity AI built-in |
-| **Phù hợp nếu** | Đang dùng VS Code hàng ngày | Đang dùng Cursor, muốn thêm Claude | Đang dùng Antigravity |
+|                             | **VS Code**               | **Cursor**                       | **Antigravity**   |
+| --------------------------- | ------------------------------- | -------------------------------------- | ----------------------- |
+| **Cách cài**        | Extension chính chủ           | Extension hoặc Terminal               | Terminal                |
+| **Giao diện**        | Panel chat riêng               | Panel chat hoặc Terminal              | Terminal                |
+| **Tương thích**    | ✅ Tốt nhất                   | ✅ Tốt (Extension có thể lỗi nhẹ) | ✅ Tốt                 |
+| **AI khác sẵn có** | GitHub Copilot                  | Cursor AI built-in                     | Antigravity AI built-in |
+| **Phù hợp nếu**    | Đang dùng VS Code hàng ngày | Đang dùng Cursor, muốn thêm Claude | Đang dùng Antigravity |
 
 > 🎯 **Rule of thumb:**
+>
 > - Đang dùng editor nào → cài Claude Code vào editor đó
 > - Chưa dùng editor nào → bắt đầu với **VS Code** (phổ biến nhất, tài liệu nhiều nhất)
 > - Muốn nhanh nhất → dùng **Terminal** (chỉ cần gõ `claude`)
@@ -372,6 +375,7 @@ Checklist fix nhanh:
 > "Đọc file PRD-vServer.md và kiểm tra xem có story nào thiếu acceptance criteria không"
 
 **AI đã làm:**
+
 - Đọc toàn bộ PRD (15 trang)
 - Liệt kê 4 user story thiếu acceptance criteria
 - Gợi ý acceptance criteria cho từng story
@@ -385,6 +389,7 @@ Checklist fix nhanh:
 > "Tạo template meeting notes cho sprint retrospective, include các section: What went well, What to improve, Action items"
 
 **AI đã làm:**
+
 - Tạo file `retro-template.md` ngay trong project
 - Format đẹp, có bảng, có checkbox cho action items
 - Thêm section "Follow-up from last retro"
@@ -395,13 +400,13 @@ Checklist fix nhanh:
 
 # 📚 Tài nguyên thêm
 
-| Link | Mô tả |
-|------|-------|
-| [Node.js Downloads](https://nodejs.org/) | Cài Node.js LTS |
+| Link                                                            | Mô tả                          |
+| --------------------------------------------------------------- | -------------------------------- |
+| [Node.js Downloads](https://nodejs.org/)                           | Cài Node.js LTS                 |
 | [Claude Code Docs](https://docs.anthropic.com/en/docs/claude-code) | Tài liệu chính chủ Anthropic |
-| [VS Code](https://code.visualstudio.com/) | Tải VS Code |
-| [Cursor](https://cursor.sh/) | Tải Cursor |
-| [Anthropic Console](https://console.anthropic.com/) | Quản lý API key & billing |
+| [VS Code](https://code.visualstudio.com/)                          | Tải VS Code                     |
+| [Cursor](https://cursor.sh/)                                       | Tải Cursor                      |
+| [Anthropic Console](https://console.anthropic.com/)                | Quản lý API key & billing      |
 
 ---
 

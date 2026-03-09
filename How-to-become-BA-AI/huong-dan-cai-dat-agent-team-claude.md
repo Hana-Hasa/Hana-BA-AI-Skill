@@ -1,6 +1,6 @@
 # 🤖 Claude Code Agent Teams — Hướng dẫn cài đặt và sử dụng
 
-> ✍️ **Tác giả:** Senior BA team VNG
+> ✍️ **Tác giả:** Hana Ngọc Huyền
 > 🗓️ **Ngày viết:** Tháng 3/2026
 > 🎯 **Dành cho:** BA đã cài Claude Code, muốn dùng nhiều AI agent cùng lúc để tăng tốc công việc
 > 📚 **Series:** Becoming an AI-Augmented BA — Article 4
@@ -78,6 +78,7 @@ Mở file `settings.json` bằng editor bất kỳ (VS Code, Cursor, Notepad...)
 ```
 
 > ⚠️ **Lưu ý format JSON:**
+>
 > - Mỗi dòng cần dấu phẩy `,` ở cuối (trừ dòng cuối cùng trong block)
 > - Dùng dấu ngoặc kép `"` cho cả key và value
 > - Nếu không chắc, copy đoạn mẫu phía trên và chỉnh lại
@@ -98,12 +99,14 @@ Mở file `settings.json` bằng editor bất kỳ (VS Code, Cursor, Notepad...)
 Nếu bạn chỉ muốn **thử nhanh** mà không sửa file:
 
 **Windows (PowerShell):**
+
 ```powershell
 $env:CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS = "1"
 claude
 ```
 
 **Mac/Linux (Terminal):**
+
 ```bash
 export CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1
 claude
@@ -115,10 +118,10 @@ claude
 
 ## ✅ Cài đặt — Tóm tắt
 
-| Cách | Việc cần làm | Hiệu lực |
-|------|-------------|-----------|
-| Cách 1 (file) | Thêm `env` vào `settings.json` → restart Claude Code | Vĩnh viễn ✅ |
-| Cách 2 (biến MT) | Export biến môi trường → chạy `claude` | Chỉ phiên hiện tại |
+| Cách              | Việc cần làm                                             | Hiệu lực             |
+| ------------------ | ----------------------------------------------------------- | ---------------------- |
+| Cách 1 (file)     | Thêm `env` vào `settings.json` → restart Claude Code | Vĩnh viễn ✅         |
+| Cách 2 (biến MT) | Export biến môi trường → chạy `claude`              | Chỉ phiên hiện tại |
 
 ---
 
@@ -140,6 +143,7 @@ edge cases, và dependencies. Sau đó tổng hợp kết quả."
 ```
 
 Claude sẽ tự động:
+
 1. 🧑‍💼 Tạo **Team Lead** (chính Claude đang chat với bạn)
 2. 👥 Spawn **teammates** (mỗi agent nhận 1 file PRD)
 3. 📋 Phân chia task rõ ràng
@@ -164,13 +168,13 @@ Khi team đang chạy:
 
 ## Step 3 — Một số lệnh hữu ích khi dùng Teams
 
-| Hành động | Cách làm |
-|-----------|----------|
-| Xem danh sách teammates | Hỏi Claude: "Liệt kê teammates hiện tại" |
-| Giao thêm việc | Hỏi Claude: "Tạo thêm 1 teammate để review file X" |
-| Nhắn riêng 1 teammate | Dùng `Shift+Down` chọn teammate → gõ tin nhắn |
-| Dừng 1 teammate | Hỏi Claude: "Shut down teammate đang review file Y" |
-| Dọn dẹp team | Hỏi Claude: "Clean up team" |
+| Hành động             | Cách làm                                              |
+| ------------------------ | ------------------------------------------------------- |
+| Xem danh sách teammates | Hỏi Claude: "Liệt kê teammates hiện tại"           |
+| Giao thêm việc         | Hỏi Claude: "Tạo thêm 1 teammate để review file X" |
+| Nhắn riêng 1 teammate  | Dùng `Shift+Down` chọn teammate → gõ tin nhắn    |
+| Dừng 1 teammate         | Hỏi Claude: "Shut down teammate đang review file Y"   |
+| Dọn dẹp team           | Hỏi Claude: "Clean up team"                            |
 
 ---
 
@@ -213,11 +217,11 @@ Tổng hợp nguyên nhân root cause."
 
 ## ❌ KHÔNG nên dùng khi:
 
-| Tình huống | Lý do |
-|-----------|-------|
-| Task đơn giản, chỉ 1 file | Overkill — chat thường nhanh hơn |
-| Task phải làm tuần tự | Agent Teams tỏa sáng khi làm **song song** |
-| Cần tiết kiệm token/credit | Nhiều agent = nhiều token hơn đáng kể |
+| Tình huống                  | Lý do                                             |
+| ----------------------------- | -------------------------------------------------- |
+| Task đơn giản, chỉ 1 file | Overkill — chat thường nhanh hơn               |
+| Task phải làm tuần tự     | Agent Teams tỏa sáng khi làm**song song** |
+| Cần tiết kiệm token/credit | Nhiều agent = nhiều token hơn đáng kể        |
 
 ---
 
@@ -253,13 +257,13 @@ Mỗi teammate có cửa sổ riêng, nhìn trực quan hơn.
 
 # ⚠️ LƯU Ý & HẠN CHẾ
 
-| Hạn chế | Giải thích |
-|---------|-----------|
-| **Tốn token nhiều hơn** | Mỗi teammate dùng context window riêng → chi phí tăng theo số agent |
-| **Không resume được** | Nếu đóng terminal, team in-process sẽ mất. Phải tạo team mới |
-| **1 team / 1 session** | Không thể chạy 2 team trong cùng 1 phiên Claude Code |
-| **Không nested** | Teammate không thể tạo team con bên trong |
-| **File conflict** | Nếu 2 teammate sửa cùng 1 file → có thể bị xung đột. Phân task rõ ràng để tránh |
+| Hạn chế                        | Giải thích                                                                                   |
+| -------------------------------- | ---------------------------------------------------------------------------------------------- |
+| **Tốn token nhiều hơn** | Mỗi teammate dùng context window riêng → chi phí tăng theo số agent                     |
+| **Không resume được**  | Nếu đóng terminal, team in-process sẽ mất. Phải tạo team mới                           |
+| **1 team / 1 session**     | Không thể chạy 2 team trong cùng 1 phiên Claude Code                                      |
+| **Không nested**          | Teammate không thể tạo team con bên trong                                                  |
+| **File conflict**          | Nếu 2 teammate sửa cùng 1 file → có thể bị xung đột. Phân task rõ ràng để tránh |
 
 ---
 

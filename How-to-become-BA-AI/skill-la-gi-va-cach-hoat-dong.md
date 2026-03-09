@@ -1,6 +1,6 @@
 # 🧠 Skill là gì và cách hoạt động
 
-> **Tác giả:** BA AI Team — VNG Hana
+> **Tác giả:** Hana Ngọc Huyền
 > **Đối tượng:** Business Analyst muốn hiểu và tự viết Skill cho AI
 > **Ngày cập nhật:** 2026-03-09
 
@@ -25,13 +25,13 @@ Bạn đã bao giờ phải lặp đi lặp lại cùng một yêu cầu cho AI 
 
 Mỗi Skill bao gồm:
 
-| Thành phần | Vai trò |
-|---|---|
-| **YAML Frontmatter** (name + description) | "Nhãn" để AI nhận diện khi nào cần dùng Skill |
-| **Thân SKILL.md** | Hướng dẫn chi tiết từng bước AI cần làm |
-| **References/** | Tài liệu tham khảo bổ sung (style guide, glossary...) |
-| **Scripts/** | Script hỗ trợ tái sử dụng (Python, JS...) |
-| **Assets/** | Template, font, icon cho đầu ra |
+| Thành phần                                    | Vai trò                                                  |
+| ----------------------------------------------- | --------------------------------------------------------- |
+| **YAML Frontmatter** (name + description) | "Nhãn" để AI nhận diện khi nào cần dùng Skill     |
+| **Thân SKILL.md**                        | Hướng dẫn chi tiết từng bước AI cần làm          |
+| **References/**                           | Tài liệu tham khảo bổ sung (style guide, glossary...) |
+| **Scripts/**                              | Script hỗ trợ tái sử dụng (Python, JS...)            |
+| **Assets/**                               | Template, font, icon cho đầu ra                         |
 
 ```
 skill-name/
@@ -68,24 +68,24 @@ AI đánh giá: "Yêu cầu này có khớp với Skill nào không?"
 
 ### ✅ Ưu điểm
 
-| Ưu điểm | Giải thích |
-|---|---|
-| **Nhất quán** | Mỗi lần chạy, AI đều tuân theo cùng một quy trình — không bỏ bước, không quên format |
-| **Tái sử dụng** | Viết một lần, dùng mãi. Chia sẻ cho cả team cùng sử dụng |
-| **Giảm prompt lặp lại** | Không cần giải thích lại ngữ cảnh mỗi conversation mới |
-| **Kiểm soát chất lượng** | Đầu ra có thể đo lường, so sánh, cải tiến qua từng phiên bản |
-| **Mở rộng được** | Có thể ghép nhiều Skill lại hoặc thêm script hỗ trợ |
-| **Dễ bảo trì** | Sửa SKILL.md là thay đổi hành vi AI ngay lập tức, không cần code |
+| Ưu điểm                          | Giải thích                                                                                         |
+| ----------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| **Nhất quán**               | Mỗi lần chạy, AI đều tuân theo cùng một quy trình — không bỏ bước, không quên format |
+| **Tái sử dụng**            | Viết một lần, dùng mãi. Chia sẻ cho cả team cùng sử dụng                                   |
+| **Giảm prompt lặp lại**    | Không cần giải thích lại ngữ cảnh mỗi conversation mới                                      |
+| **Kiểm soát chất lượng** | Đầu ra có thể đo lường, so sánh, cải tiến qua từng phiên bản                            |
+| **Mở rộng được**         | Có thể ghép nhiều Skill lại hoặc thêm script hỗ trợ                                         |
+| **Dễ bảo trì**             | Sửa SKILL.md là thay đổi hành vi AI ngay lập tức, không cần code                            |
 
 ### ❌ Nhược điểm
 
-| Nhược điểm | Giải thích |
-|---|---|
-| **Tốn token** | Toàn bộ nội dung SKILL.md được nạp vào context mỗi lần kích hoạt — Skill dài = tốn token = tốn tiền |
-| **Cần đầu tư thời gian viết** | Skill tốt cần qua nhiều vòng test và cải tiến, không phải viết xong là xài được ngay |
-| **Kích hoạt sai** | Nếu description viết không chính xác, AI có thể gọi Skill khi không cần (false positive) hoặc bỏ lỡ khi cần (false negative) |
-| **Giới hạn bởi context window** | Skill quá dài + prompt người dùng dài = có thể vượt giới hạn context của model |
-| **Cứng nhắc nếu viết quá chi tiết** | Skill quá nhiều quy tắc "BẮT BUỘC/KHÔNG BAO GIỜ" sẽ khiến AI mất linh hoạt trong các tình huống ngoại lệ |
+| Nhược điểm                                  | Giải thích                                                                                                                               |
+| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Tốn token**                            | Toàn bộ nội dung SKILL.md được nạp vào context mỗi lần kích hoạt — Skill dài = tốn token = tốn tiền                       |
+| **Cần đầu tư thời gian viết**       | Skill tốt cần qua nhiều vòng test và cải tiến, không phải viết xong là xài được ngay                                        |
+| **Kích hoạt sai**                       | Nếu description viết không chính xác, AI có thể gọi Skill khi không cần (false positive) hoặc bỏ lỡ khi cần (false negative) |
+| **Giới hạn bởi context window**        | Skill quá dài + prompt người dùng dài = có thể vượt giới hạn context của model                                                |
+| **Cứng nhắc nếu viết quá chi tiết** | Skill quá nhiều quy tắc "BẮT BUỘC/KHÔNG BAO GIỜ" sẽ khiến AI mất linh hoạt trong các tình huống ngoại lệ                   |
 
 ---
 
@@ -185,6 +185,7 @@ Output (PRD hoàn chỉnh)
 **Bước 2 — Mỗi step là một action rõ ràng**
 
 Mỗi step trong SKILL.md cần:
+
 1. **Tên action** bắt đầu bằng động từ (Trích xuất, Phân loại, Viết, Tạo, Format...)
 2. **Tại sao step này quan trọng** (1 câu)
 3. **Input của step** — lấy từ đâu (từ user hay từ output của step trước)
@@ -238,11 +239,11 @@ Output: Review comment sẵn sàng paste vào PR
 
 ### Khi nào nên tách flow thành nhiều Skill?
 
-| Tình huống | Nên làm gì |
-|---|---|
-| Flow dưới 5 steps, các step liên quan chặt | Giữ trong 1 Skill |
-| Flow trên 7 steps hoặc có step dùng lại ở flow khác | Tách thành nhiều Skill, gọi lần lượt |
-| Step có logic phức tạp cần script riêng | Viết script vào `scripts/`, gọi từ Skill |
+| Tình huống                                               | Nên làm gì                                  |
+| ---------------------------------------------------------- | ---------------------------------------------- |
+| Flow dưới 5 steps, các step liên quan chặt            | Giữ trong 1 Skill                             |
+| Flow trên 7 steps hoặc có step dùng lại ở flow khác | Tách thành nhiều Skill, gọi lần lượt    |
+| Step có logic phức tạp cần script riêng               | Viết script vào `scripts/`, gọi từ Skill |
 
 ---
 
@@ -262,13 +263,13 @@ Output: Review comment sẵn sàng paste vào PR
 
 **1. Capture Intent — Trả lời 5 câu hỏi**
 
-| # | Câu hỏi | Ví dụ |
-|---|---------|-------|
-| 1 | Skill này giúp AI làm gì? | Tạo PRD từ meeting notes |
-| 2 | Ai sẽ dùng? | BA team, không biết code |
-| 3 | Khi nào kích hoạt? | User nói "viết PRD", "tạo PRD" |
+| # | Câu hỏi                          | Ví dụ                                       |
+| - | ---------------------------------- | --------------------------------------------- |
+| 1 | Skill này giúp AI làm gì?      | Tạo PRD từ meeting notes                    |
+| 2 | Ai sẽ dùng?                      | BA team, không biết code                    |
+| 3 | Khi nào kích hoạt?              | User nói "viết PRD", "tạo PRD"             |
 | 4 | Output tốt trông như thế nào? | File MD, tiếng Việt, theo template công ty |
-| 5 | Có ví dụ nào để tham khảo? | PRD cũ trong Confluence |
+| 5 | Có ví dụ nào để tham khảo?  | PRD cũ trong Confluence                      |
 
 **2. Write SKILL.md — Theo template chuẩn**
 
@@ -284,6 +285,7 @@ Các section bắt buộc: When to Use, Inputs, Output Format, Step-by-Step Inst
 **3-4. Test & Evaluate — So sánh A/B**
 
 Tạo prompt thực tế, chạy 2 phiên: một có Skill, một không. So sánh:
+
 - Chất lượng output
 - Thời gian xử lý
 - Số token tiêu thụ
@@ -322,11 +324,11 @@ SKILL QUALITY CHECK
 
 ## 🎯 Tóm tắt
 
-| Bạn muốn... | Hãy nhớ... |
-|---|---|
-| Hiểu Skill là gì | SOP cho AI — đóng gói hướng dẫn để AI thực thi nhất quán |
+| Bạn muốn...              | Hãy nhớ...                                                                                       |
+| -------------------------- | -------------------------------------------------------------------------------------------------- |
+| Hiểu Skill là gì        | SOP cho AI — đóng gói hướng dẫn để AI thực thi nhất quán                               |
 | Viết Skill tốn ít token | Dưới 500 dòng, câu mệnh lệnh, dùng bảng, tách references, dùng example thay giải thích |
-| Tạo flow nhiều tác vụ | Vẽ diagram trước, mỗi step có input/output rõ ràng, nối output → input giữa các step |
-| Tránh lỗi phổ biến | Đừng viết quá nhiều quy tắc cứng, test description kỹ để tránh kích hoạt sai |
+| Tạo flow nhiều tác vụ  | Vẽ diagram trước, mỗi step có input/output rõ ràng, nối output → input giữa các step    |
+| Tránh lỗi phổ biến     | Đừng viết quá nhiều quy tắc cứng, test description kỹ để tránh kích hoạt sai          |
 
 > 💡 **Skill tốt nhất không phải Skill dài nhất — mà là Skill ngắn nhất vẫn cho kết quả đúng.**
