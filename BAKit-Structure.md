@@ -95,7 +95,8 @@
 │   ├── strategy-analysis        ← [MỚI] giai đoạn 1
 │   │   ├── current-state-analysis.md    ← Current State Data Miner
 │   │   ├── business-case-generator.md   ← Business Case Generator
-│   │   └── swot-canvas-builder.md       ← Output SWOT / Business Model Canvas
+│   │   ├── swot-canvas-builder.md       ← Output SWOT / Business Model Canvas
+│   │   └── competitive-research.md      ← [MỚI] So sánh đối thủ, benchmark, market gap
 │   │
 │   ├── stakeholder-planning     ← [MỚI] giai đoạn 2
 │   │   ├── stakeholder-mapper.md        ← Stakeholder Mapper & RACI
@@ -105,7 +106,8 @@
 │   ├── discovery                ← giữ, tinh chỉnh (giai đoạn 3)
 │   │   ├── problem-analysis.md          ← giữ nguyên
 │   │   ├── elicitation-prep.md          ← [ĐỔI TÊN] stakeholder-analysis.md
-│   │   └── elicitation-synthesizer.md   ← [MỚI] Tổng hợp biên bản khơi gợi
+│   │   ├── elicitation-synthesizer.md   ← [MỚI] Tổng hợp biên bản khơi gợi
+│   │   └── user-research.md             ← [MỚI] Tổng hợp insight từ interview/survey
 │   │
 │   ├── requirement              ← giữ, bổ sung (giai đoạn 4)
 │   │   ├── userstory-writing.md         ← giữ nguyên
@@ -118,7 +120,8 @@
 │   │   ├── impact-analysis.md           ← giữ nguyên
 │   │   ├── dependency-analysis.md       ← giữ nguyên
 │   │   ├── risk-analysis.md             ← giữ nguyên
-│   │   └── change-impact-analyzer.md    ← [MỚI] Change Impact Analyzer
+│   │   ├── change-impact-analyzer.md    ← [MỚI] Change Impact Analyzer
+│   │   └── technical-research.md        ← [MỚI] Đánh giá lựa chọn kỹ thuật / vendor từ góc nhìn BA
 │   │
 │   ├── product-thinking         ← giữ nguyên
 │   │   ├── prioritization.md
@@ -223,6 +226,7 @@
 | Skills folders | ➕ Thêm mới          | 5           |
 | Skill files    | ➕ Thêm mới          | 21          |
 | Skill files    | ✏️ Đổi tên / Sửa | 3           |
+| Skill files    | 🔬 Research skills mới | 3         |
 | Agents         | ➕ Thêm mới          | 1           |
 | Templates      | ➕ Thêm mới          | 13          |
 | Prompts        | ➕ Thêm mới          | 7           |
