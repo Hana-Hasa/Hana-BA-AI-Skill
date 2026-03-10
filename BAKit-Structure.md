@@ -220,17 +220,17 @@
 
 ## Tóm tắt thay đổi
 
-| Loại          | Action                 | Số lượng |
-| -------------- | ---------------------- | ----------- |
-| Commands       | ➕ Thêm mới          | 8           |
-| Skills folders | ➕ Thêm mới          | 5           |
-| Skill files    | ➕ Thêm mới          | 21          |
-| Skill files    | ✏️ Đổi tên / Sửa | 3           |
-| Skill files    | 🔬 Research skills mới | 3         |
-| Agents         | ➕ Thêm mới          | 1           |
-| Templates      | ➕ Thêm mới          | 13          |
-| Prompts        | ➕ Thêm mới          | 7           |
-| Knowledge      | ➕ Thêm mới          | 1           |
+| Loại          | Action                  | Số lượng |
+| -------------- | ----------------------- | ----------- |
+| Commands       | ➕ Thêm mới           | 8           |
+| Skills folders | ➕ Thêm mới           | 5           |
+| Skill files    | ➕ Thêm mới           | 21          |
+| Skill files    | ✏️ Đổi tên / Sửa  | 3           |
+| Skill files    | 🔬 Research skills mới | 3           |
+| Agents         | ➕ Thêm mới           | 1           |
+| Templates      | ➕ Thêm mới           | 13          |
+| Prompts        | ➕ Thêm mới           | 7           |
+| Knowledge      | ➕ Thêm mới           | 1           |
 
 ---
 
