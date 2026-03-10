@@ -1,0 +1,39 @@
+{
+  "skill_name": "BA Skill Creator",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Tôi muốn tạo một skill để viết PRD từ yêu cầu thô của stakeholder. Skill này dùng cho BA không biết code tại VNG Hana.",
+      "expected_output": "Skill có YAML frontmatter hợp lệ, có các mục: When to Use, Inputs, Output Format, Step-by-Step Instructions, Examples, Limitations.",
+      "files": [],
+      "assertions": [
+        "SKILL.md có YAML frontmatter với name và description",
+        "description <= 200 chars và chứa trigger phrases",
+        "Có ít nhất 1 ví dụ input → output",
+        "Có mục Limitations"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Viết một skill cho BA để tóm tắt meeting notes thành action items và gửi email theo format chuẩn của team.",
+      "expected_output": "Skill với output template email rõ ràng, các bước extract action items từ notes theo thứ tự logic.",
+      "files": [],
+      "assertions": [
+        "Có Output Format với template email cụ thể",
+        "Step-by-step giải thích why trước how",
+        "Tone friendly, dùng you/we"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Turn this workflow into a skill: mỗi khi tôi muốn viết user story, tôi đưa cho AI mô tả tính năng, AI trả về user story đầy đủ theo format Given/When/Then.",
+      "expected_output": "Skill tốt phải nhận diện đây là yêu cầu tạo skill từ workflow có sẵn, extract intent từ context và không hỏi lại những gì đã rõ.",
+      "files": [],
+      "assertions": [
+        "Không hỏi lại những thông tin đã có trong prompt",
+        "Output template theo Given/When/Then",
+        "Có trigger phrase liên quan đến user story"
+      ]
+    }
+  ]
+}

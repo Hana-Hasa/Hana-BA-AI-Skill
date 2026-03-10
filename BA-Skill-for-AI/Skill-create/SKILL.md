@@ -1,6 +1,6 @@
 ---
 name: BA Skill Creator
-description: Create a new Claude skill (.md + folder structure) tailored for non-tech BA workflows at VNG Hana. Use this skill whenever a user wants to build a new skill, capture a repeatable BA workflow as a skill, or improve an existing BA skill. Triggers on: "create a skill", "write a skill for", "make a skill that", "turn this workflow into a skill", "new skill for BA".
+description: Build or improve a Claude skill for non-tech BA workflows at VNG Hana. Use whenever asked to "create a skill", "turn this into a skill", "new skill for BA", or "improve an existing skill".
 ---
 
 # BA Skill Creator
@@ -49,8 +49,9 @@ Use this exact template. Fill every section based on the interview. Delete optio
 ```markdown
 ---
 name: [Human-readable skill name, max 64 chars]
-description: [What it does + when to trigger it. Be specific and slightly "pushy" — 
+description: [What it does + when to trigger it. Be specific and slightly "pushy" —
 mention trigger phrases so Claude doesn't under-trigger. Max 200 chars.]
+compatibility: [Optional — list required tools/MCPs/dependencies, delete if not needed]
 ---
 
 # [Skill Name]
@@ -162,6 +163,37 @@ All BA skills at VNG Hana follow these rules. Apply them when drafting skill ins
 
 ---
 
+## Step 3.5 — Test Cases
+
+Sau khi draft skill xong, tạo 2–3 test prompts thực tế — câu người dùng thật sự sẽ nói.
+
+1. Hỏi user: *"Đây là 3 test case tôi muốn thử. Bạn muốn thêm/bớt gì không?"*
+2. Lưu test cases vào `evals/evals.json` theo schema dưới đây:
+
+```json
+{
+  "skill_name": "example-skill",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Câu prompt thực tế của user",
+      "expected_output": "Mô tả output mong đợi",
+      "files": [],
+      "assertions": [
+        "Assertion 1 — điều kiện để pass",
+        "Assertion 2"
+      ]
+    }
+  ]
+}
+```
+
+> ⚠️ Chưa cần viết assertions — chỉ cần prompts trước. Assertions sẽ bổ sung sau khi chạy thử.
+
+> 💡 Nếu skill có output chủ quan (tone, phong cách viết), test cases không bắt buộc — hỏi user trước.
+
+---
+
 ## Step 4 — Describe Field Optimization
 
 The `description` field in YAML frontmatter is the primary trigger mechanism — Claude reads this to decide whether to invoke the skill.
@@ -194,20 +226,23 @@ After drafting:
 1. Create the folder structure: `skill-name/` with `SKILL.md` + subdirs as needed
 2. If a reusable reference doc is needed (e.g., writing style, domain glossary), write it to `references/`
 3. If a template is needed (e.g., blank SKILL structure to clone), write it to `assets/`
-4. If a reusable script is needed (e.g., a formatter, a template filler), write it to `scripts/`
-5. Show the user the final tree:
+4. If a reusable script is needed (e.g., a formatter, a template filler), write it to `scripts/` — **nếu không có script, bỏ folder này cho gọn**
+5. If test cases were created (Step 3.5), ensure `evals/evals.json` exists
+6. Show the user the final tree:
 
 ```
 skill-name/
 ├── SKILL.md
 ├── references/
 │   └── [any-reference].md
-├── scripts/
-└── assets/
-    └── [any-template].md
+├── assets/
+│   └── [any-template].md
+├── scripts/        ← chỉ tạo nếu có script thực sự
+└── evals/
+    └── evals.json  ← chỉ tạo nếu có test cases
 ```
 
-6. Ask: "Does this look right? Anything to add or adjust before we zip it up?"
+7. Hỏi: "Bạn xem qua chưa? Cần thêm hay chỉnh gì trước khi hoàn thiện không?"
 
 ---
 
@@ -219,6 +254,7 @@ Before handing off, verify:
 SKILL QUALITY CHECK
 □ SKILL.md has valid YAML frontmatter (name + description)
 □ description field is ≤200 chars and includes trigger phrases
+□ compatibility field declared if external tools/MCPs are required
 □ Skill has a clear "When to Use" section
 □ Every instruction step explains "why" before "how"
 □ Output format or template is clearly defined
@@ -227,6 +263,8 @@ SKILL QUALITY CHECK
 □ SKILL.md is under 500 lines
 □ Large reference content is moved to references/ folder
 □ Folder structure matches the standard anatomy
+□ evals/evals.json exists (if skill has objectively verifiable output)
+□ scripts/ folder removed if empty
 ```
 
 ---
@@ -235,3 +273,4 @@ SKILL QUALITY CHECK
 
 - `references/writing-style.md` — Full BA writing style rules (tone, emoji, tables, code blocks)
 - `assets/ba-skill-template.md` — Blank SKILL.md template to clone for new skills
+- `evals/evals.json` — Test cases mẫu cho BA Skill Creator (schema reference)

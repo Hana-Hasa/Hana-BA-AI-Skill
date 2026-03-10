@@ -9,6 +9,7 @@
 ---
 name: [Skill name — max 64 chars]
 description: [What it does + when to trigger. Include trigger phrases. Max 200 chars.]
+compatibility: [Optional — delete if no external tools/MCPs needed]
 ---
 
 # [Skill Name]
@@ -102,9 +103,12 @@ Output: [expected output]
 
 \```
 PRE-PUBLISH CHECK
+□ YAML frontmatter: name + description (≤200 chars) + compatibility (if needed)
 □ Output follows the defined template/format
 □ All steps explain "why" before "how"
 □ Limitations are clearly stated
 □ At least 1 real example included
+□ evals/evals.json exists (if output is objectively verifiable)
+□ scripts/ folder removed if empty
 \```
 ```
