@@ -4,7 +4,7 @@ description: Write technical how-to guides for non-tech BAs following the VNG Ha
 ---
 # Purpose of This Skill
 
-This skill helps AI produce **technical how-to guides for non-tech BAs** in the exact style used by the VNG Hana "Becoming an AI-Augmented BA" series.
+This skill helps AI produce **technical how-to guides for BAs** in the exact style used by the Hana Ngọc Huyền "Becoming an AI-Augmented BA" series.
 
 When asked to write a guide (how-to, tutorial, setup guide, onboarding doc, introduction, etc.), AI must follow the structure, tone, and rules defined below.
 
