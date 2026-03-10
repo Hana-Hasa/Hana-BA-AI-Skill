@@ -1,4 +1,4 @@
-# **BAKit structure chi tiết:**
+# **BAKit basic:**
 
 .bakit
 │
@@ -7,7 +7,8 @@
 │   ├── analyze-feature.md
 │   ├── userstory.md
 │   ├── impact.md
-│   └── testcase.md
+│   ├── testcase.md
+│   └── write-doc.md        ← viết SRS / PRD
 │
 ├── skills
 │   ├── discovery
@@ -28,6 +29,10 @@
 │   ├── product-thinking
 │   │   ├── prioritization.md
 │   │   └── metric-definition.md
+│   │
+│   ├── documentation
+│   │   ├── srs-writing.md      ← Software Requirements Specification
+│   │   └── prd-writing.md      ← Product Requirements Document
 │   │
 │   └── Delivery
 │       ├── Release planning
@@ -51,7 +56,9 @@
 │   ├── prd_template.md
 │   ├── userstory_template.md
 │   ├── acceptance_template.md
-│   └── testcase_template.md
+│   ├── testcase_template.md
+│   ├── srs_template.md         ← [MỚI]
+│   └── prd_template_full.md    ← [MỚI] bản đầy đủ có context
 │
 ├── knowledge
 │   ├── product_context.md
@@ -59,6 +66,169 @@
 │   └── glossary.md
 │
 └── bakit.config.md
+
+---
+
+# **BAKit Structure Update theo BABOK:**
+
+> Bổ sung và chỉnh sửa để bao phủ đủ **6 giai đoạn vòng đời BA** theo chuẩn BABOK v3.
+
+```
+.bakit
+│
+├── commands
+│   ├── discover.md              ← giữ nguyên (giai đoạn 3)
+│   ├── analyze-feature.md       ← giữ nguyên (giai đoạn 4)
+│   ├── userstory.md             ← giữ nguyên (giai đoạn 4)
+│   ├── impact.md                ← giữ nguyên (giai đoạn 4 & 5)
+│   ├── testcase.md              ← giữ nguyên (giai đoạn 6)
+│   ├── strategy.md              ← [MỚI] giai đoạn 1: phân tích chiến lược
+│   ├── stakeholder.md           ← [MỚI] giai đoạn 2: mapping stakeholder
+│   ├── elicitation.md           ← [MỚI] giai đoạn 3: khơi gợi & tổng hợp yêu cầu
+│   ├── change-request.md        ← [MỚI] giai đoạn 5: quản lý thay đổi
+│   ├── evaluate.md              ← [MỚI] giai đoạn 6: đánh giá giải pháp
+│   ├── write-doc.md             ← [MỚI] tạo tài liệu đặc tả (SRS/BRD/PRD/FRD)
+│   ├── model-process.md         ← [MỚI] mô hình hóa quy trình (BPMN/workflow)
+│   └── release-note.md          ← [MỚI] tạo release note & tài liệu bàn giao
+│
+├── skills
+│   ├── strategy-analysis        ← [MỚI] giai đoạn 1
+│   │   ├── current-state-analysis.md    ← Current State Data Miner
+│   │   ├── business-case-generator.md   ← Business Case Generator
+│   │   └── swot-canvas-builder.md       ← Output SWOT / Business Model Canvas
+│   │
+│   ├── stakeholder-planning     ← [MỚI] giai đoạn 2
+│   │   ├── stakeholder-mapper.md        ← Stakeholder Mapper & RACI
+│   │   ├── persona-creation.md          ← chuyển từ discovery sang đây
+│   │   └── communication-plan.md        ← Communication Plan Configurator
+│   │
+│   ├── discovery                ← giữ, tinh chỉnh (giai đoạn 3)
+│   │   ├── problem-analysis.md          ← giữ nguyên
+│   │   ├── elicitation-prep.md          ← [ĐỔI TÊN] stakeholder-analysis.md
+│   │   └── elicitation-synthesizer.md   ← [MỚI] Tổng hợp biên bản khơi gợi
+│   │
+│   ├── requirement              ← giữ, bổ sung (giai đoạn 4)
+│   │   ├── userstory-writing.md         ← giữ nguyên
+│   │   ├── acceptance-criteria.md       ← giữ nguyên
+│   │   ├── edgecase-discovery.md        ← giữ nguyên
+│   │   ├── requirements-modeler.md      ← [MỚI] sinh PlantUML / diagram
+│   │   └── requirements-verifier.md     ← [MỚI] chấm điểm INVEST checklist
+│   │
+│   ├── system-analysis          ← giữ, bổ sung (giai đoạn 4 & 5)
+│   │   ├── impact-analysis.md           ← giữ nguyên
+│   │   ├── dependency-analysis.md       ← giữ nguyên
+│   │   ├── risk-analysis.md             ← giữ nguyên
+│   │   └── change-impact-analyzer.md    ← [MỚI] Change Impact Analyzer
+│   │
+│   ├── product-thinking         ← giữ nguyên
+│   │   ├── prioritization.md
+│   │   └── metric-definition.md
+│   │
+│   ├── solution-evaluation      ← [MỚI] giai đoạn 6
+│   │   ├── performance-analyzer.md      ← Performance Data Analyzer
+│   │   └── root-cause-analysis.md       ← Root Cause Analysis
+│   │
+│   ├── documentation            ← [MỚI] BA Doing – Viết tài liệu đặc tả
+│   │   ├── srs-writing.md               ← Software Requirements Specification
+│   │   ├── brd-writing.md               ← Business Requirements Document
+│   │   ├── frd-writing.md               ← Functional Requirements Document
+│   │   ├── prd-writing.md               ← Product Requirements Document
+│   │   ├── api-spec-writing.md          ← API Specification (BA perspective)
+│   │   └── data-dictionary.md           ← Định nghĩa field, data type, business rule
+│   │
+│   ├── process-modeling         ← [MỚI] Mô hình hóa quy trình
+│   │   ├── bpmn-modeling.md             ← BPMN 2.0 (As-Is / To-Be)
+│   │   ├── workflow-mapping.md          ← Swimlane, flowchart, process flow
+│   │   ├── as-is-to-be.md               ← Gap analysis quy trình
+│   │   └── sequence-flow.md             ← Sequence diagram từ góc nhìn BA
+│   │
+│   └── delivery                 ← [MỞ RỘNG] tài liệu bàn giao & vận hành
+│       ├── release-planning.md          ← sửa từ "Release planning"
+│       ├── documentation.md             ← sửa từ "Documentation"
+│       ├── release-note-writing.md      ← [MỚI] Release Note gửi KH / internal
+│       ├── uat-plan-writing.md          ← [MỚI] UAT Plan, test scenario business
+│       ├── mom-writing.md               ← [MỚI] Minutes of Meeting chuẩn
+│       ├── traceability-matrix.md       ← [MỚI] Ma trận truy xuất yêu cầu (RTM)
+│       └── handover-doc.md              ← [MỚI] Tài liệu bàn giao dev/QA/ops
+│
+├── agents
+│   ├── product-strategist.md    ← giữ nguyên
+│   ├── business-analyst.md      ← giữ nguyên
+│   ├── solution-architect.md    ← giữ nguyên
+│   ├── ux-designer.md           ← giữ nguyên
+│   ├── qa-engineer.md           ← giữ nguyên
+│   ├── data-analyst.md          ← giữ nguyên
+│   └── change-analyst.md        ← [MỚI] xử lý change request & traceability
+│
+├── prompts
+│   ├── discovery_prompt.md      ← giữ nguyên
+│   ├── requirement_prompt.md    ← giữ nguyên
+│   ├── impact_prompt.md         ← giữ nguyên
+│   ├── testing_prompt.md        ← giữ nguyên
+│   ├── strategy_prompt.md       ← [MỚI]
+│   ├── stakeholder_prompt.md    ← [MỚI]
+│   ├── elicitation_prompt.md    ← [MỚI]
+│   ├── evaluation_prompt.md     ← [MỚI]
+│   ├── documentation_prompt.md  ← [MỚI] viết SRS/BRD/PRD/FRD
+│   ├── process_prompt.md        ← [MỚI] mô hình hóa BPMN/workflow
+│   └── delivery_prompt.md       ← [MỚI] release note, UAT, handover
+│
+├── templates
+│   ├── prd_template.md               ← giữ nguyên
+│   ├── userstory_template.md         ← giữ nguyên
+│   ├── acceptance_template.md        ← giữ nguyên
+│   ├── testcase_template.md          ← giữ nguyên
+│   ├── business_case_template.md     ← [MỚI]
+│   ├── stakeholder_map_template.md   ← [MỚI]
+│   ├── impact_report_template.md     ← [MỚI]
+│   ├── release_note_template.md      ← [MỚI]
+│   ├── srs_template.md               ← [MỚI]
+│   ├── brd_template.md               ← [MỚI]
+│   ├── frd_template.md               ← [MỚI]
+│   ├── api_spec_template.md          ← [MỚI]
+│   ├── bpmn_annotation_template.md   ← [MỚI]
+│   ├── uat_plan_template.md          ← [MỚI]
+│   ├── mom_template.md               ← [MỚI]
+│   ├── traceability_matrix_template.md  ← [MỚI]
+│   └── handover_template.md          ← [MỚI]
+│
+├── knowledge
+│   ├── product_context.md       ← giữ nguyên
+│   ├── system_architecture.md   ← giữ nguyên
+│   ├── glossary.md              ← giữ nguyên
+│   └── business_rules.md        ← [MỚI] Business Rules từ elicitation phase
+│
+└── bakit.config.md
+```
+
+## Mapping Skills theo 6 giai đoạn BABOK + 2 nhóm BA Doing
+
+| Giai đoạn / Nhóm               | Skills Folder                          | Commands                                                |
+| --------------------------------- | -------------------------------------- | ------------------------------------------------------- |
+| 1. Strategy Analysis              | `strategy-analysis/`                 | `strategy.md`                                         |
+| 2. BA Planning & Stakeholder      | `stakeholder-planning/`              | `stakeholder.md`                                      |
+| 3. Elicitation & Collaboration    | `discovery/`                         | `discover.md`, `elicitation.md`                     |
+| 4. Requirements Analysis & Design | `requirement/`, `system-analysis/` | `analyze-feature.md`, `userstory.md`, `impact.md` |
+| 5. Requirements Life Cycle Mgmt   | `system-analysis/` (change)          | `change-request.md`                                   |
+| 6. Solution Evaluation            | `solution-evaluation/`               | `evaluate.md`, `testcase.md`                        |
+| 📄 BA Doing – Viết tài liệu   | `documentation/`                     | `write-doc.md`                                        |
+| 🔄 BA Doing – Mô hình hóa     | `process-modeling/`                  | `model-process.md`                                    |
+| 📦 BA Doing – Bàn giao          | `delivery/`                          | `release-note.md`                                     |
+
+## Tóm tắt thay đổi
+
+| Loại          | Action                 | Số lượng |
+| -------------- | ---------------------- | ----------- |
+| Commands       | ➕ Thêm mới          | 8           |
+| Skills folders | ➕ Thêm mới          | 5           |
+| Skill files    | ➕ Thêm mới          | 21          |
+| Skill files    | ✏️ Đổi tên / Sửa | 3           |
+| Agents         | ➕ Thêm mới          | 1           |
+| Templates      | ➕ Thêm mới          | 13          |
+| Prompts        | ➕ Thêm mới          | 7           |
+| Knowledge      | ➕ Thêm mới          | 1           |
+
+---
 
 giải thích **mối quan hệ các phần của BAKit** theo 3 cách để bạn dễ hình dung:
 
